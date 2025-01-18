@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma Ruslan Yahilovych</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fb;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .contact-top {
+            text-align: center;
+            padding: 10px;
+            background-color: #3A8B41;
+            font-size: 14px;
+            color: white;
+        }
+
+        .contact-top p {
+            margin: 5px 0;
+        }
+
+        .services, .reviews {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .services h2, .reviews h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .service-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .service-images img {
+            max-width: 30%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .slider {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 8px;
+            max-height: 300px; /* Зменшений розмір */
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        #reviewsList {
+            margin: 20px 0;
+        }
+
+        #reviewsList div {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #reviewForm textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        #reviewForm button {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #reviewForm button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RUSLAN YAHILOVYCH ELEKTROINSTALLATIONEN</h1>
+    </header>
+
+    <section class="services">
+        <h2>Unsere Arbeiten</h2>
+        <div class="service-images">
+            <img src="./1.jpeg" alt="Projekt 1">
+            <img src="./2.jpeg" alt="Projekt 2">
+            <img src="./3.jpeg" alt="Projekt 3">
+            <img src="./4.jpeg" alt="Projekt 4">
+            <img src="./5.jpeg" alt="Projekt 5">
+        </div>
+    </section>
+
+    <section class="slider">
+        <h2>Unsere Projekte</h2>
+        <div class="slider-container">
+            <div class="slide active"><img src="./1.jpeg" alt="Bild 1"></div>
+            <div class="slide"><img src="./2.jpeg" alt="Bild 2"></div>
+            <div class="slide"><img src="./3.jpeg" alt="Bild 3"></div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <h2>Bewertungen</h2>
+        <div id="reviewsList"></div>
+        <form id="reviewForm">
+            <input id="reviewName" type="text" placeholder="Ihr Name" required />
+            <textarea id="reviewText" placeholder="Fügen Sie Ihre Bewertung hinzu..." required></textarea>
+            <button type="submit">Bewertung abgeben</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>☎ Telefon: +49 123 456 789</p>
+        <p>✉ E-Mail: info@ruslanyahilovych.de</p>
+        <p>🏢 Adresse: Musterstraße 123, 12345 Stadt, Deutschland</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
